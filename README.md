@@ -1,32 +1,23 @@
-# Group Members
+# Description
 
-Scott S. <br>
-Michelle B. <br>
-Amara S. <br>
-Ali A.
+This was a group project in my web dev bootcamp class. The purpose of the project was to use server-side APIs to create a functional application. 
 
-TITLE
+## Project Details
+
+<strong>TITLE</strong> <br>
 Streamline
 
-DESCRIPTION
-movie database to pull top 10 movies from any given year.
-is movie currently streaming - where
+<strong>USER STORY</strong> <br>
+I'm not sure what to watch tonight, so I want to view recommendations on the best movies or series available on various streaming services.
 
-USER STORY
-As someone looking for something to do, I want to search top movies ever made by any given year. So that I can decide on a movie to watch.
+<strong>DETAILS</strong>
+* When a user selects their streaming service and media type, they are presented with the top 10 results from IMDB. 
+* The user can click to view more information for each movie/series, such as the release date, cast & crew, and synopsis.
+* The user can also save a movie/series to their Watch List.
+* The Watch List uses local storage to store and display the user's saved titles.
 
-As a trivia nut, I want to search top movies ever made by any given year and see various details about that movie.
 
-APIs used
-IMDB - rapid api
-OTT - rapid api
+# Live Application
+https://mrpancakes.github.io/streaming-service-api/
 
-ACCEPTAINCE CRITERIA
-GIVEN an opening movie dashboard with a form input for year
-WHEN I enter a year, a list of the top ten movies for that year appear
-THEN when I click on the movie I am presented with detailed information about that movie
-WHEN I click the save button
-THEN movies I want to see are saved to "My movies"
-
-#Project Link <br>
-https://asa151930.github.io/Project-1/
+![Portfolio Preview](./assets/images/application-screenshot.png)
