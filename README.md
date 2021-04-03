@@ -17,7 +17,7 @@ I'm not sure what to watch tonight, so I want to view recommendations on the bes
 * The Watch List uses local storage to store and display the user's saved titles.
 
 
-# Live Application
-https://mrpancakes.github.io/streaming-service-api/
+## Live Application
+View the live page [here.](https://mrpancakes.github.io/streaming-service-api/)
 
 ![Portfolio Preview](./assets/images/application-screenshot.png)
