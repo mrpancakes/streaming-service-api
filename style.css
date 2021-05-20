@@ -72,7 +72,7 @@ body {
 
 nav ul li a,
 nav .brand-logo {
-  color: #1976d2;
+  color: #1976d2 !important;
 }
 
 footer {
@@ -176,33 +176,6 @@ form {
 
 #modal {
   box-shadow: 3px 5px 5px #535353;
-}
-.modal-content {
-  background-color: var(--light-purple);
-}
-.title {
-  font-family: "Fjalla One", sans-serif;
-  font-size: 4rem;
-}
-
-.tagline {
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: italic;
-  font-size: 1.7rem;
-}
-
-.year {
-  font-size: 1.5rem;
-}
-
-.overview {
-  font-size: 1.5rem;
-  text-align: left;
-}
-
-.cast {
-  font-size: 1.5rem;
-  text-align: left;
 }
 
 @media screen and (max-width: 1741px) {

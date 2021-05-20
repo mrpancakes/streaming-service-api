@@ -9,7 +9,8 @@ let currentYear = moment().format("YYYY");
 let apiKey = "";
 let yearSearch = "";
 // const searchVal = $("#search-val");
-let moviesUl = $("#movie-results");
+let moviesUl = $("#movie-results"); // DO we ned this
+let movieResultDiv = $("#all-results");
 let expandedTitle = "";
 let serviceSelector = document.getElementById("streaming-service");
 let streamingService = "";
@@ -26,7 +27,6 @@ let showTitleArr = JSON.parse(localStorage.getItem("showTitle")) || [];
 $("#submit").click(function (event) {
   event.preventDefault();
   moviesUl.html("");
-  // yearSearch = searchVal.val();
   streamingService = serviceSelector.options[
     serviceSelector.selectedIndex
   ].text.toLowerCase();
@@ -106,13 +106,103 @@ function movieResultsFetch() {
 
       for (let i = 0; i < 10; i++) {
         let idEnding = i;
-        $(`#movie-poster-${idEnding}`).attr("src",`${response.results[i].backdropURLs["780"]}`);
-        $(`#title${idEnding}`).text(`${response.results[i].title}`);
-        $(`#modal-title-${idEnding}`).text(`${response.results[i].title}`);
-        $(`#modal-tagline-${idEnding}`).text(`${response.results[i].tagline}`);
-        $(`#modal-year-${idEnding}`).text("Released: " + `${response.results[i].year}`);
-        $(`#modal-overview-${idEnding}`).text(`${response.results[i].overview}`);
-        $(`#modal-cast-${idEnding}`).text("Cast: " + `${response.results[i].cast.join(", ")}`);
+
+        const resultingDiv = `
+        <div class="movie-card col s12 m6 l3">
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-image">
+                <!-- Movie Poster -->
+                <img id="movie-poster-${idEnding}" src="" />
+                <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons add">add</i></a>
+              </div>
+              <!-- Movie Title (Card) -->
+              <div class="card-content">
+                <p id="title${idEnding}">Example Title ${idEnding}</p>
+              </div>
+
+              <!-- Modal Start -->
+              <div class="info-modal">
+                <!-- Modal Button -->
+                <a class="waves-effect waves-light btn modal-trigger" href="#modal${idEnding}">More
+                  Info</a>
+                <!-- Modal Inside -->
+                <div id="modal${idEnding}" class="modal">
+                  <div class="modal-content">
+                    <h4 class="title" id="modal-title-${idEnding}">Example Title</h4>
+                    <p class="year" id="modal-year-${idEnding}">Released: 2021</p>
+                    <p class="tagline" id="modal-tagline-${idEnding}">This is a tagline</p>
+                    <br />
+                    <p class="overview" id="modal-overview-${idEnding}">lorum Ipsum</p>
+                    <br />
+                    <p class="cast" id="modal-cast-${idEnding}">Cast: Cast and crew</p>
+                    <br />
+                    
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>`
+
+      $("#all-results").append(resultingDiv);
+
+      //   const resultingDiv = `<div class="movie-card col s12 m6 l3">
+      //   <div class="row">
+      //     <div class="col">
+      //       <div class="card">
+      //         <div class="card-image">
+      //           <!-- Movie Poster -->
+      //           <img id="movie-poster-${idEnding}" src="${response.results[i].backdropURLs["780"]}" />
+      //           <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons add">add</i></a>
+      //         </div>
+      //         <!-- Movie Title (Card) -->
+      //         <div class="card-content">
+      //           <p id="title${idEnding}">${response.results[i].title}</p>
+      //         </div>
+
+      //         <!-- Modal Start -->
+      //         <div class="info-modal">
+      //           <!-- Modal Button -->
+      //           <a class="waves-effect waves-light btn modal-trigger" href="#modal0">More
+      //             Info</a>
+      //           <!-- Modal Inside -->
+      //           <div id="modal${idEnding}" class="modal">
+      //             <div class="modal-content">
+      //               <h4 class="title" id="modal-title-${idEnding}">${response.results[i].title}</h4>
+      //               <p class="year" id="modal-year-${idEnding}">Released: ${response.results[i].year}</p>
+      //               <p class="tagline" id="modal-tagline-${idEnding}">${response.results[i].tagline}</p>
+      //               <br />
+      //               <p class="overview" id="modal-overview-${idEnding}">${response.results[i].overview}</p>
+      //               <br />
+      //               <p class="cast" id="modal-cast-${idEnding}">Cast: ${response.results[i].cast.join(", ")}</p>
+      //               <br />
+                    
+      //             </div>
+      //             <div class="modal-footer">
+      //               <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+      //             </div>
+      //           </div>
+      //         </div>
+      //       </div>
+      //     </div>
+      //   </div>
+      // </div>`
+
+      
+
+        // $(`#movie-poster-${idEnding}`).attr("src",`${response.results[i].backdropURLs["780"]}`);
+        // $(`#title${idEnding}`).text(`${response.results[i].title}`);
+        // $(`#modal-title-${idEnding}`).text(`${response.results[i].title}`);
+        // $(`#modal-tagline-${idEnding}`).text(`${response.results[i].tagline}`);
+        // $(`#modal-year-${idEnding}`).text("Released: " + `${response.results[i].year}`);
+        // $(`#modal-overview-${idEnding}`).text(`${response.results[i].overview}`);
+        // $(`#modal-cast-${idEnding}`).text("Cast: " + `${response.results[i].cast.join(", ")}`);
       }
     })
     .catch((err) => {

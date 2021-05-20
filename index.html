@@ -25,8 +25,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="style.css" />
   <title>Streamline</title>
 </head>
 
@@ -92,9 +90,8 @@
     <h1 class="hide" id="headline"></h1>
     <p class="hide" id="subheadline">As rated by IMDB</p>
 
-    <section class="hide container" id="resulting-movies">
-      <div class="row">
-
+    <section class="container hide" id="resulting-movies">
+      <div class="row" id="all-results">
           <div class="movie-card col s12 m6 l3">
               <div class="row">
                 <div class="col">
@@ -106,25 +103,26 @@
                     </div>
                     <!-- Movie Title (Card) -->
                     <div class="card-content">
-                      <p id="title0">Movie Title</p>
+                      <p id="title0">Movie Title Example - Hard Coded</p>
                     </div>
     
                     <!-- Modal Start -->
                     <div class="info-modal">
                       <!-- Modal Button -->
-                      <a class="waves-effect waves-light btn modal-trigger deep-purple lighten-3" href="#modal0">More
+                      <a class="waves-effect waves-light btn modal-trigger" href="#modal0">More
                         Info</a>
                       <!-- Modal Inside -->
                       <div id="modal0" class="modal">
                         <div class="modal-content">
-                          <h4 class="title" id="modal-title-0"></h4>
-                          <p class="tagline" id="modal-tagline-0"></p>
+                          <h4 class="title" id="modal-title-0">TITLE</h4>
+                          <p class="year" id="modal-year-0">2021</p>
+                          <p class="tagline" id="modal-tagline-0">Example Tagline of stuff</p>
                           <br />
-                          <p class="overview" id="modal-overview-0"></p>
+                          <p class="overview" id="modal-overview-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                           <br />
-                          <p class="cast" id="modal-cast-0"></p>
+                          <p class="cast" id="modal-cast-0">Cast and crew info</p>
                           <br />
-                          <p class="year" id="modal-year-0"></p>
+                          
                         </div>
                         <div class="modal-footer">
                           <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
@@ -135,385 +133,6 @@
                 </div>
               </div>
             </div>
-        <!-- Movie 1 Card -->
-
-        <div class="movie-card col s12 m6 l3">
-          <div class="row">
-            <div class="col">
-              <div class="card">
-                <div class="card-image">
-                  <!-- Movie Poster -->
-                  <img id="movie-poster-1" src="" />
-                  <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons add">add</i></a>
-                </div>
-                <!-- Movie Title (Card) -->
-                <div class="card-content">
-                  <p id="title1">Movie Title</p>
-                </div>
-
-                <!-- Modal Start -->
-                <div class="info-modal">
-                  <!-- Modal Button -->
-                  <a class="waves-effect waves-light btn modal-trigger deep-purple lighten-3" href="#modal1">More
-                    Info</a>
-                  <!-- Modal Inside -->
-                  <div id="modal1" class="modal">
-                    <div class="modal-content">
-                      <h4 class="title" id="modal-title-1"></h4>
-                      <p class="tagline" id="modal-tagline-1"></p>
-                      <br />
-                      <p class="overview" id="modal-overview-1"></p>
-                      <br />
-                      <p class="cast" id="modal-cast-1"></p>
-                      <br />
-                      <p class="year" id="modal-year-1"></p>
-                    </div>
-                    <div class="modal-footer">
-                      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Movie 2 Card -->
-
-        <div class="movie-card col s12 m6 l3">
-          <div class="row">
-            <div class="col">
-              <div class="card">
-                <div class="card-image">
-                  <!-- Movie Poster -->
-                  <img id="movie-poster-2" src="" />
-                  <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons add">add</i></a>
-                </div>
-                <!-- Movie Title (Card) -->
-                <div class="card-content">
-                  <p id="title2">Movie Title</p>
-                </div>
-
-                <!-- Modal Start -->
-                <div class="info-modal">
-                  <!-- Modal Button -->
-                  <a class="waves-effect waves-light btn modal-trigger deep-purple lighten-3" href="#modal2">More
-                    Info</a>
-                  <!-- Modal Inside -->
-                  <div id="modal2" class="modal">
-                    <div class="modal-content">
-                      <h4 class="title" id="modal-title-2"></h4>
-                      <p class="tagline" id="modal-tagline-2"></p>
-                      <p class="overview" id="modal-overview-2"></p>
-                      <br />
-                      <p class="cast" id="modal-cast-2"></p>
-                      <br />
-                      <p class="year" id="modal-year-2"></p>
-                    </div>
-                    <div class="modal-footer">
-                      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Movie 3 Card -->
-
-        <div class="movie-card col s12 m6 l3">
-          <div class="row">
-            <div class="col">
-              <div class="card">
-                <div class="card-image">
-                  <!-- Movie Poster -->
-                  <img id="movie-poster-3" src="" />
-                  <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons add">add</i></a>
-                </div>
-                <!-- Movie Title (Card) -->
-                <div class="card-content">
-                  <p id="title3">Movie Title</p>
-                </div>
-
-                <!-- Modal Start -->
-                <div class="info-modal">
-                  <!-- Modal Button -->
-                  <a class="waves-effect waves-light btn modal-trigger deep-purple lighten-3" href="#modal3">More
-                    Info</a>
-                  <!-- Modal Inside -->
-                  <div id="modal3" class="modal">
-                    <div class="modal-content">
-                      <h4 class="title" id="modal-title-3"></h4>
-                      <p class="tagline" id="modal-tagline-3"></p>
-                      <p class="overview" id="modal-overview-3"></p>
-                      <br />
-                      <p class="cast" id="modal-cast-3"></p>
-                      <br />
-                      <p class="year" id="modal-year-3"></p>
-                    </div>
-                    <div class="modal-footer">
-                      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Movie 4 Card -->
-
-        <div class="movie-card col s12 m6 l3">
-          <div class="row">
-            <div class="col">
-              <div class="card">
-                <div class="card-image">
-                  <!-- Movie Poster -->
-                  <img id="movie-poster-4" src="" />
-                  <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons add">add</i></a>
-                </div>
-                <!-- Movie Title (Card) -->
-                <div class="card-content">
-                  <p id="title4">Movie Title</p>
-                </div>
-
-                <!-- Modal Start -->
-                <div class="info-modal">
-                  <!-- Modal Button -->
-                  <a class="waves-effect waves-light btn modal-trigger deep-purple lighten-3" href="#modal4">More
-                    Info</a>
-                  <!-- Modal Inside -->
-                  <div id="modal4" class="modal">
-                    <div class="modal-content">
-                      <h4 class="title" id="modal-title-4"></h4>
-                      <p class="tagline" id="modal-tagline-4"></p>
-                      <p class="overview" id="modal-overview-4"></p>
-                      <br />
-                      <p class="cast" id="modal-cast-4"></p>
-                      <br />
-                      <p class="year" id="modal-year-4"></p>
-                    </div>
-                    <div class="modal-footer">
-                      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Movie 5 Card -->
-
-        <div class="movie-card col s12 m6 l3">
-          <div class="row">
-            <div class="col">
-              <div class="card">
-                <div class="card-image">
-                  <!-- Movie Poster -->
-                  <img id="movie-poster-5" src="" />
-                  <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons add">add</i></a>
-                </div>
-                <!-- Movie Title (Card) -->
-                <div class="card-content">
-                  <p id="title5">Movie Title</p>
-                </div>
-
-                <!-- Modal Start -->
-                <div class="info-modal">
-                  <!-- Modal Button -->
-                  <a class="waves-effect waves-light btn modal-trigger deep-purple lighten-3" href="#modal5">More
-                    Info</a>
-                  <!-- Modal Inside -->
-                  <div id="modal5" class="modal">
-                    <div class="modal-content">
-                      <h4 class="title" id="modal-title-5"></h4>
-                      <p class="tagline" id="modal-tagline-5"></p>
-                      <p class="overview" id="modal-overview-5"></p>
-                      <br />
-                      <p class="cast" id="modal-cast-5"></p>
-                      <br />
-                      <p class="year" id="modal-year-5"></p>
-                    </div>
-                    <div class="modal-footer">
-                      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Movie 6 Card -->
-
-        <div class="movie-card col s12 m6 l3">
-          <div class="row">
-            <div class="col">
-              <div class="card">
-                <div class="card-image">
-                  <!-- Movie Poster -->
-                  <img id="movie-poster-6" src="" />
-                  <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons add">add</i></a>
-                </div>
-                <!-- Movie Title (Card) -->
-                <div class="card-content">
-                  <p id="title6">Movie Title</p>
-                </div>
-
-                <!-- Modal Start -->
-                <div class="info-modal">
-                  <!-- Modal Button -->
-                  <a class="waves-effect waves-light btn modal-trigger deep-purple lighten-3" href="#modal6">More
-                    Info</a>
-                  <!-- Modal Inside -->
-                  <div id="modal6" class="modal">
-                    <div class="modal-content">
-                      <h4 class="title" id="modal-title-6"></h4>
-                      <p class="tagline" id="modal-tagline-6"></p>
-                      <p class="overview" id="modal-overview-6"></p>
-                      <br />
-                      <p class="cast" id="modal-cast-6"></p>
-                      <br />
-                      <p class="year" id="modal-year-6"></p>
-                    </div>
-                    <div class="modal-footer">
-                      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Movie 7 Card -->
-
-        <div class="movie-card col s12 m6 l3">
-          <div class="row">
-            <div class="col">
-              <div class="card">
-                <div class="card-image">
-                  <!-- Movie Poster -->
-                  <img id="movie-poster-7" src="" />
-                  <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons add">add</i></a>
-                </div>
-                <!-- Movie Title (Card) -->
-                <div class="card-content">
-                  <p id="title7">Movie Title</p>
-                </div>
-
-                <!-- Modal Start -->
-                <div class="info-modal">
-                  <!-- Modal Button -->
-                  <a class="waves-effect waves-light btn modal-trigger deep-purple lighten-3" href="#modal7">More
-                    Info</a>
-                  <!-- Modal Inside -->
-                  <div id="modal7" class="modal">
-                    <div class="modal-content">
-                      <h4 class="title" id="modal-title-7"></h4>
-                      <p class="tagline" id="modal-tagline-7"></p>
-                      <p class="overview" id="modal-overview-7"></p>
-                      <br />
-                      <p class="cast" id="modal-cast-7"></p>
-                      <br />
-                      <p class="year" id="modal-year-7"></p>
-                    </div>
-                    <div class="modal-footer">
-                      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Movie 8 Card -->
-
-        <div class="movie-card col s12 m6 l3">
-          <div class="row">
-            <div class="col">
-              <div class="card">
-                <div class="card-image">
-                  <!-- Movie Poster -->
-                  <img id="movie-poster-8" src="" />
-                  <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons add">add</i></a>
-                </div>
-                <!-- Movie Title (Card) -->
-                <div class="card-content">
-                  <p id="title8">Movie Title</p>
-                </div>
-
-                <!-- Modal Start -->
-                <div class="info-modal">
-                  <!-- Modal Button -->
-                  <a class="waves-effect waves-light btn modal-trigger deep-purple lighten-3" href="#modal8">More
-                    Info</a>
-                  <!-- Modal Inside -->
-                  <div id="modal8" class="modal">
-                    <div class="modal-content">
-                      <h4 class="title" id="modal-title-8"></h4>
-                      <p class="tagline" id="modal-tagline-8"></p>
-                      <p class="overview" id="modal-overview-8"></p>
-                      <br />
-                      <p class="cast" id="modal-cast-8"></p>
-                      <br />
-                      <p class="year" id="modal-year-8"></p>
-                    </div>
-                    <div class="modal-footer">
-                      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Movie 9 Card -->
-
-        <div class="movie-card col s12 m6 l3">
-            <div class="row">
-              <div class="col">
-                <div class="card">
-                  <div class="card-image">
-                    <!-- Movie Poster -->
-                    <img id="movie-poster-9" src="" />
-                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons add">add</i></a>
-                  </div>
-                  <!-- Movie Title (Card) -->
-                  <div class="card-content">
-                    <p id="title9">Movie Title</p>
-                  </div>
-  
-                  <!-- Modal Start -->
-                  <div class="info-modal">
-                    <!-- Modal Button -->
-                    <a class="waves-effect waves-light btn modal-trigger deep-purple lighten-3" href="#modal9">More
-                      Info</a>
-                    <!-- Modal Inside -->
-                    <div id="modal9" class="modal">
-                      <div class="modal-content">
-                        <h4 class="title" id="modal-title-9"></h4>
-                        <p class="tagline" id="modal-tagline-9"></p>
-                        <p class="overview" id="modal-overview-9"></p>
-                        <br />
-                        <p class="cast" id="modal-cast-9"></p>
-                        <br />
-                        <p class="year" id="modal-year-9"></p>
-                      </div>
-                      <div class="modal-footer">
-                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
         
       </div>
     </section>
