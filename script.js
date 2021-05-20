@@ -210,8 +210,11 @@ $(document).ready(function () {
 
 
   // Watchlist Page
-  $("i.add").on("click", function (event) {
+  $(document).on("click", 'i.add', function (event) {
     event.preventDefault();
+
+    console.log('click worked')
+
     let parent1 = $(this).parent();
     let parent2 = parent1.parent();
     let sibling1 = parent2.siblings(".card-content");
