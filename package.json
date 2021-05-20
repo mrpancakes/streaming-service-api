@@ -1,0 +1,22 @@
+{
+  "name": "streaming-service-api",
+  "version": "1.0.0",
+  "description": "This was a group project in my web dev bootcamp class. The purpose of the project was to use server-side APIs to create a functional application.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrpancakes/streaming-service-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mrpancakes/streaming-service-api/issues"
+  },
+  "homepage": "https://github.com/mrpancakes/streaming-service-api#readme",
+  "dependencies": {
+    "dotenv": "^9.0.2"
+  }
+}

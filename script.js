@@ -1,3 +1,7 @@
+require('dotenv').config();
+
+console.log(process.env.AUTH_TOKEN);
+
 $(document).ready(function () {
   $(".modal").modal();
   $('.tap-target').tapTarget();
@@ -206,8 +210,6 @@ $(document).ready(function () {
         console.error(err);
       });
   }
-
-
 
   // Watchlist Page
   $(document).on("click", 'i.add', function (event) {
